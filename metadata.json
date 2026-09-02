@@ -1,0 +1,8 @@
+{
+  "name": "La Grande Collection de Recettes Gourmandes",
+  "description": "Plus de 100 recettes de pâtisserie, gâteaux et desserts réunies en une seule collection numérique avec 8 bonus exclusifs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
