@@ -20,7 +20,7 @@ export const HERO_BULLETS = [
 export const TRUST_POINTS = [
   { label: "100 Recettes", desc: "Une collection gourmande complète", icon: "BookOpen" },
   { label: "Accès Immédiat", desc: "Disponible dans votre boîte mail", icon: "Zap" },
-  { label: "Tous Écrans", desc: "Mobile, Tablette & PDF imprimable", icon: "Smartphone" },
+  { label: "Tous Écrans", desc: "Mobile, Tablette & Ordinateur", icon: "Smartphone" },
   { label: "Garantie 7 Jours", desc: "100% Satisfait ou Remboursé", icon: "ShieldCheck" }
 ];
 
@@ -653,7 +653,7 @@ export const TESTIMONIALS: TestimonialItem[] = [
     name: "Sophie Delorme",
     location: "Lyon, France",
     role: "Maman & passionnée de pâtisserie",
-    quote: "Cette collection a transformé nos week-ends en famille ! Les fiches PDF sont d'une clarté exemplaire, les proportions tombent toujours juste et le marbré au chocolat 70% est devenu le gâteau préféré de mes enfants. C'est bien plus pratique que d'avoir dix livres encombrants dans la cuisine.",
+    quote: "Cette collection a transformé nos week-ends en famille ! Les fiches recettes sont d'une clarté exemplaire, les proportions tombent toujours juste et le marbré au chocolat 70% est devenu le gâteau préféré de mes enfants. C'est bien plus pratique que d'avoir dix livres encombrants dans la cuisine.",
     rating: 5,
     verified: true,
     date: "Il y a 3 jours",
@@ -709,12 +709,12 @@ export const FAQS: FAQItem[] = [
   {
     id: "faq-1",
     question: "Comment vais-je recevoir ma collection ?",
-    answer: "Dès votre commande validée, vous recevez instantanément un e-mail contenant vos identifiants et le lien d'accès sécurisé pour télécharger l'ensemble de la collection et des 6 bonus sur tous vos appareils."
+    answer: "Dès votre commande validée, vous recevez instantanément un e-mail contenant vos identifiants et le lien d'accès sécurisé pour consulter et télécharger l'ensemble de la collection et des 6 bonus sur tous vos appareils."
   },
   {
     id: "faq-2",
     question: "Est-ce un produit physique ou numérique ?",
-    answer: "Il s'agit d'une collection 100% numérique sous format PDF haute définition. Vous pouvez la consulter immédiatement sur smartphone, tablette ou ordinateur, et imprimer facilement les fiches recettes de votre choix."
+    answer: "Il s'agit d'une collection 100% numérique en haute définition. Vous pouvez la consulter immédiatement sur smartphone, tablette ou ordinateur, et imprimer facilement les fiches recettes de votre choix."
   },
   {
     id: "faq-3",

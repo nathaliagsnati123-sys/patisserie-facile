@@ -301,13 +301,13 @@ export default function App() {
             </p>
           </div>
 
-          {/* Clean & Elegant Product Offer Card */}
-          <div className="bg-white rounded-3xl border-2 border-[#DFCDB7] shadow-xl overflow-hidden p-6 sm:p-10 md:p-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+          {/* Clean & Elegant Product Offer Card - Vertical Stack */}
+          <div className="bg-white rounded-3xl border-2 border-[#DFCDB7] shadow-xl overflow-hidden p-6 sm:p-10 max-w-2xl mx-auto">
+            <div className="flex flex-col gap-8">
               
-              {/* Product Image Column */}
+              {/* Product Image on Top */}
               <div className="flex flex-col items-center justify-center relative">
-                <div className="relative w-full max-w-sm rounded-2xl overflow-hidden bg-[#FAF7F2] p-2 border border-[#DFCDB7] shadow-md group">
+                <div className="relative w-full max-w-md rounded-2xl overflow-hidden bg-[#FAF7F2] p-3 border border-[#DFCDB7] shadow-md group">
                   <img
                     src="https://i.ibb.co/H1Mmq1G/Chat-GPT-Image-2-de-set-de-2026-08-42-40.png"
                     alt="Collection Complète 100 Recettes Gourmandes et Bonus"
@@ -317,10 +317,10 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Clean Offer & Pricing Details Column */}
+              {/* Offer & Pricing Details Below */}
               <div className="space-y-6 flex flex-col justify-center">
                 
-                <div className="space-y-2 border-b border-[#DFCDB7]/80 pb-5">
+                <div className="space-y-2 border-b border-[#DFCDB7]/80 pb-5 text-center sm:text-left">
                   <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#2A140E]">
                     La Grande Collection Gourmande
                   </h3>
@@ -329,42 +329,75 @@ export default function App() {
                   </p>
                 </div>
 
-                {/* Key Points - Clean & Minimal */}
-                <div className="space-y-2.5 text-xs sm:text-sm text-[#3D261C]">
-                  <div className="flex items-center gap-2.5">
-                    <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span><strong>100 recettes pas à pas</strong> illustrées et détaillées</span>
+                {/* List of ALL Materials Included */}
+                <div className="space-y-3">
+                  <span className="text-xs font-bold text-[#8B1E3F] uppercase tracking-wider block text-center sm:text-left">
+                    Contenu complet de votre collection :
+                  </span>
+                  <div className="space-y-2 text-xs sm:text-sm text-[#2A140E]">
+                    <div className="flex items-start gap-2.5 bg-[#FAF7F2] p-2.5 rounded-xl border border-[#DFCDB7]">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>100 Recettes Gourmandes à Réaliser Chez Vous</strong></span>
+                    </div>
+                    <div className="flex items-start gap-2.5 bg-[#FAF7F2] p-2.5 rounded-xl border border-[#DFCDB7]">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Masterclass de Pâtisserie Française</strong></span>
+                    </div>
+                    <div className="flex items-start gap-2.5 bg-[#FAF7F2] p-2.5 rounded-xl border border-[#DFCDB7]">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>L'Excellence de la Pâtisserie Française</strong></span>
+                    </div>
+                    <div className="flex items-start gap-2.5 bg-[#FAF7F2] p-2.5 rounded-xl border border-[#DFCDB7]">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Les Grands Classiques de la Pâtisserie Française</strong></span>
+                    </div>
+                    <div className="flex items-start gap-2.5 bg-[#FAF7F2] p-2.5 rounded-xl border border-[#DFCDB7]">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>L'Art de la Pâtisserie aux Fruits</strong></span>
+                    </div>
+                    <div className="flex items-start gap-2.5 bg-[#FAF7F2] p-2.5 rounded-xl border border-[#DFCDB7]">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Les Secrets des Pâtisseries de Paris</strong></span>
+                    </div>
+                    <div className="flex items-start gap-2.5 bg-[#FAF7F2] p-2.5 rounded-xl border border-[#DFCDB7]">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>La Bible des Macarons & Mignardises</strong></span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2.5">
-                    <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span><strong>6 e-books bonus inclus</strong> (Masterclass, Lenôtre, Macarons...)</span>
-                  </div>
-                  <div className="flex items-center gap-2.5">
-                    <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Format <strong>PDF haute qualité</strong> interactif & imprimable</span>
-                  </div>
-                  <div className="flex items-center gap-2.5">
-                    <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span><strong>Accès immédiat et à vie</strong> sur smartphone, tablette & PC</span>
+                  
+                  <div className="flex items-center justify-center sm:justify-start gap-2 text-xs text-[#5C4538] pt-1">
+                    <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span><strong>Accès immédiat et à vie</strong> sur smartphone, tablette & ordinateur</span>
                   </div>
                 </div>
 
                 {/* Pricing Block */}
-                <div className="bg-[#FAF7F2] p-5 rounded-2xl border border-[#DFCDB7] text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="bg-[#FAF7F2] p-4 sm:p-5 rounded-2xl border border-[#DFCDB7] text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4">
                   <div>
-                    <span className="text-xs text-[#8C766B] line-through block">
-                      Prix régulier : {formattedOriginalPrice}
-                    </span>
-                    <span className="text-3xl sm:text-4xl font-serif font-black text-[#8B1E3F] block leading-tight">
-                      {formattedPromoPrice}
-                    </span>
+                    <div className="flex items-center justify-center sm:justify-start gap-2 mb-0.5">
+                      <span className="text-xs font-semibold text-[#8C766B] line-through">
+                        Prix régulier : {formattedOriginalPrice}
+                      </span>
+                      <span className="bg-red-100 text-red-700 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">
+                        -80%
+                      </span>
+                    </div>
+                    <div className="flex items-baseline justify-center sm:justify-start gap-1">
+                      <span className="text-3xl sm:text-4xl font-serif font-black text-[#8B1E3F] leading-tight">
+                        {formattedPromoPrice}
+                      </span>
+                      <span className="text-[11px] text-[#634E42] font-semibold uppercase tracking-wider ml-1">
+                        TTC
+                      </span>
+                    </div>
                   </div>
+
                   <div className="text-center sm:text-right">
-                    <span className="inline-block bg-emerald-100 text-emerald-800 font-bold text-[11px] px-2.5 py-1 rounded-full border border-emerald-300">
-                      Paiement unique
+                    <span className="inline-flex items-center gap-1 bg-emerald-100 text-emerald-800 font-bold text-xs px-3 py-1 rounded-full border border-emerald-300">
+                      ✓ Paiement unique
                     </span>
-                    <span className="text-[11px] text-[#7A6359] block mt-1">
-                      Aucun abonnement
+                    <span className="text-xs text-[#7A6359] block mt-1">
+                      Accès immédiat & à vie
                     </span>
                   </div>
                 </div>
