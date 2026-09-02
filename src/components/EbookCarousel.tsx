@@ -40,6 +40,7 @@ export default function EbookCarousel() {
                     <img
                       src={ebook.coverImage}
                       alt={ebook.title}
+                      referrerPolicy="no-referrer"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-95 select-none pointer-events-none"
                     />
                     

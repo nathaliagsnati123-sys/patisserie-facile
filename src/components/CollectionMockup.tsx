@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 interface CollectionMockupProps {
   onOpenRecipe?: () => void;
 }
 
 export default function CollectionMockup({ onOpenRecipe }: CollectionMockupProps) {
-  const [imgSrc, setImgSrc] = useState<string>('https://i.ibb.co/H1Mmq1G/Chat-GPT-Image-2-de-set-de-2026-08-42-40.png');
-
   return (
     <div className="relative w-full flex justify-center select-none my-2">
       
@@ -16,17 +14,10 @@ export default function CollectionMockup({ onOpenRecipe }: CollectionMockupProps
       {/* Main Image Container */}
       <div className="relative w-fit max-w-full sm:max-w-lg rounded-2xl overflow-hidden shadow-[0_15px_40px_rgba(32,16,10,0.18)] border border-[#C5A059]/40 group">
         <img
-          src={imgSrc}
+          src="https://i.ibb.co/H1Mmq1G/Chat-GPT-Image-2-de-set-de-2026-08-42-40.png"
           alt="100 Recettes Gourmandes à Réaliser Chez Vous"
           referrerPolicy="no-referrer"
           loading="eager"
-          onError={() => {
-            if (imgSrc === 'https://i.ibb.co/H1Mmq1G/Chat-GPT-Image-2-de-set-de-2026-08-42-40.png') {
-              setImgSrc('https://i.ibb.co/8Lnj2g9M/Chat-GPT-Image-1-de-set-de-2026-20-43-41.png');
-            } else if (imgSrc === 'https://i.ibb.co/8Lnj2g9M/Chat-GPT-Image-1-de-set-de-2026-20-43-41.png') {
-              setImgSrc('/mockup.png');
-            }
-          }}
           className="w-full h-auto max-h-[480px] object-contain block transition-transform duration-500 group-hover:scale-[1.01]"
         />
       </div>

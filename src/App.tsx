@@ -215,65 +215,48 @@ export default function App() {
           </div>
 
           {/* 6 Bonuses Grid (3 columns on lg, 2 on sm) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {BONUSES.map((bonus) => (
               <div
                 key={bonus.id}
                 className="bg-white border-2 border-[#DFCDB7] hover:border-[#8B1E3F] rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  {/* Image Cover */}
-                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#2A140E]">
+                  {/* Full Image Container - Fully visible without cropping */}
+                  <div className="relative w-full bg-[#FAF7F2] p-4 sm:p-5 flex items-center justify-center min-h-[280px] sm:min-h-[320px] border-b border-[#DFCDB7]/60 overflow-hidden">
                     <img
                       src={bonus.image}
                       alt={bonus.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      referrerPolicy="no-referrer"
+                      className="w-full h-auto max-h-[320px] object-contain drop-shadow-md group-hover:scale-[1.02] transition-transform duration-300 rounded-xl select-none"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     
-                    <span className="absolute top-3 left-3 bg-[#8B1E3F] text-amber-200 text-[10.5px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border border-amber-300/30 shadow-xs">
+                    <span className="absolute top-3 left-3 bg-[#8B1E3F] text-amber-200 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-amber-300/30 shadow-sm">
                       BONUS #{bonus.number}
                     </span>
 
-                    <span className="absolute top-3 right-3 bg-red-600 text-white text-[10px] font-bold uppercase px-2 py-0.5 rounded-full shadow-xs">
+                    <span className="absolute top-3 right-3 bg-red-600 text-white text-[10.5px] font-bold uppercase px-2.5 py-1 rounded-full shadow-sm">
                       OFFERT
                     </span>
                   </div>
 
-                  {/* Details */}
-                  <div className="p-5 space-y-3">
-                    <div>
-                      <h3 className="font-serif font-bold text-base sm:text-lg text-[#2A140E] leading-snug group-hover:text-[#8B1E3F] transition-colors">
-                        {bonus.title}
-                      </h3>
-                      <p className="text-xs text-[#8B1E3F] font-semibold mt-1">
-                        {bonus.subtitle}
-                      </p>
-                    </div>
+                  {/* Details - Only Title & Short Description */}
+                  <div className="p-5 sm:p-6 space-y-2">
+                    <h3 className="font-serif font-bold text-lg sm:text-xl text-[#2A140E] leading-snug group-hover:text-[#8B1E3F] transition-colors">
+                      {bonus.title}
+                    </h3>
 
-                    <p className="text-xs sm:text-sm text-[#634E42] leading-relaxed">
+                    <p className="text-sm text-[#634E42] leading-relaxed">
                       {bonus.description}
                     </p>
-
-                    {/* Features checklist */}
-                    {bonus.features && (
-                      <ul className="space-y-1.5 pt-3 border-t border-[#F0E6D8] text-xs text-[#5C4538]">
-                        {bonus.features.map((feat, i) => (
-                          <li key={i} className="flex items-start gap-1.5">
-                            <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                            <span className="leading-tight">{feat}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
                   </div>
                 </div>
 
                 {/* Price tag with Red Strikethrough and 0€ */}
-                <div className="p-5 pt-0">
+                <div className="p-5 sm:p-6 pt-0">
                   <div className="p-3 bg-[#FAF7F2] rounded-2xl border border-[#E8DEC8] flex items-center justify-between">
                     <div className="flex flex-col">
-                      <span className="text-[10.5px] text-[#7A6359] font-medium">Valeur réelle</span>
+                      <span className="text-[11px] text-[#7A6359] font-medium">Valeur réelle</span>
                       <span className="text-sm font-bold text-red-600 line-through">
                         {bonus.originalPrice},00 €
                       </span>
@@ -282,7 +265,7 @@ export default function App() {
                       <span className="text-[10px] uppercase font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full block mb-0.5">
                         100% GRATUIT
                       </span>
-                      <span className="text-base sm:text-lg font-black text-emerald-700 font-mono">
+                      <span className="text-lg font-black text-emerald-700 font-mono">
                         0,00 €
                       </span>
                     </div>
