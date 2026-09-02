@@ -48,11 +48,8 @@ export default function EbookCarousel() {
                     <div className="absolute top-0 bottom-0 left-0 w-3 bg-gradient-to-r from-black/60 via-black/20 to-transparent shadow-inner" />
                     
                     {/* Top Badges */}
-                    <div className="absolute top-3 left-4 right-3 flex items-center justify-between">
-                      <span className="bg-[#8B1E3F] text-amber-100 text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border border-amber-300/30 shadow-sm">
-                        {ebook.volumeNumber}
-                      </span>
-                      <span className="bg-black/75 backdrop-blur-xs text-amber-200 text-[10px] font-mono px-2 py-0.5 rounded-md border border-white/20">
+                    <div className="absolute top-3 right-3 flex items-center justify-end">
+                      <span className="bg-black/75 backdrop-blur-xs text-amber-200 text-[10px] font-mono px-2 py-0.5 rounded-md border border-white/20 shadow-xs">
                         {ebook.recipesCount}
                       </span>
                     </div>

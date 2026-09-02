@@ -230,14 +230,6 @@ export default function App() {
                       referrerPolicy="no-referrer"
                       className="w-full h-auto max-h-[320px] object-contain drop-shadow-md group-hover:scale-[1.02] transition-transform duration-300 rounded-xl select-none"
                     />
-                    
-                    <span className="absolute top-3 left-3 bg-[#8B1E3F] text-amber-200 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-amber-300/30 shadow-sm">
-                      BONUS #{bonus.number}
-                    </span>
-
-                    <span className="absolute top-3 right-3 bg-red-600 text-white text-[10.5px] font-bold uppercase px-2.5 py-1 rounded-full shadow-sm">
-                      OFFERT
-                    </span>
                   </div>
 
                   {/* Details - Only Title & Short Description */}
